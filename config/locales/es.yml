@@ -4,10 +4,20 @@ es:
     attributes:
       user:
         country: País
-        date_of_birth: Fecha de nacimiento
+        date_of_birth: Fecha de Nacimiento
         gender: Género
-        postal_code: Código postal
+        location: Dirección
+        phone_number: Numero de Teléfono
+        postal_code: Código Postal
   decidim:
+    admin:
+      actions:
+        export: Exportar
+      exports:
+        export_as: Exportar como %{export_format}
+      extra_user_fields:
+        menu:
+          title: Administrar extra user fields
     components:
       extra_user_fields:
         name: ExtraUserFields
@@ -15,7 +25,44 @@ es:
       admin:
         exports:
           users: Participantes
+        extra_user_fields:
+          fields:
+            country:
+              description: Este campo es una lista de paises. Los usuarios podran escoger un país.
+              label: Activar campo Pais
+            date_of_birth:
+              description: Este campo es de tipo Fecha. El usuario podrá registrar su fecha de nacimiento usando un selector de fecha.
+              label: Activar campo Fecha de Nacimiento
+            gender:
+              description: Este campo es una lista de generos. El usuario podrá escoger con que género registrarse.
+              label: Activar campo Género
+            location:
+              description: Este campo es de tipo texto. El usuario podra escribir una dirección en él.
+              label: Activar campo Dirección
+            phone_number:
+              description: Este campo es de tipo texto. El usuario podrá escribir su numero de teléfono.
+              label: Activar campo Número de Teléfono
+            postal_code:
+              description: Este campo es de tipo texto. El usuario podrá introducir su codigo postal.
+              label: Activar campo Código Postal
+          form:
+            callout:
+              help: Activa las funcionalidades de Extra user fields, esto permitirá que durante el proceso de registro los campos extra aparezca. Recuerda que incluso con esta opción activa, el formulario de registro <strong>solo añadirá los campos que actives más abajo.</strong>
+            extra_user_fields:
+              extra_user_fields_enabled: Activar Extra User Fields
+              section: Campos extra disponibles en el formulario de registro.
+            global:
+              title: Activar / Desactivar Funcionalidad
+          index:
+            save: Guardar Configuración
+            title: Administar extra user fields
+          update:
+            failure: Ocurrió un error al actualizar los datos de la organización
+            success: Extra user fields han sido actualizados correctamente en la organización
       genders:
         female: Mujer
         male: Hombre
         other: Otro
+      registration_form:
+        signup:
+          legend: Mas información
