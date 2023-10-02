@@ -14,7 +14,7 @@ eu:
       actions:
         export: Esportatu
       exports:
-        export_as: "%{export_format}" gisa esportatu
+        export_as: esportatu %{export format} gisa
       extra_user_fields:
         menu:
           title: Kudeatu extra user fields
